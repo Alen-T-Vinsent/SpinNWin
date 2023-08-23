@@ -15,7 +15,6 @@ class GameViewController: UIViewController{
     var array:[Slice] = []
     var isSpinning:Bool = false
     
-    
     //MARK: @IBOutlet varibles
     @IBOutlet weak var fortuneWheel: SwiftFortuneWheel!
     
@@ -28,7 +27,6 @@ class GameViewController: UIViewController{
         configureFortuneWheelUI()
         configureButtonUI()
     }
-    
     
     //MARK: Fuctions to Configure UI
     func configureFortuneWheelUI(){
@@ -69,18 +67,14 @@ class GameViewController: UIViewController{
         //activate the constraints
         NSLayoutConstraint.activate([topConstraint, leadingConstraint])
         
-        
-        
         goBackBtn.addTarget(self, action: #selector(goBackDismissAction), for: .touchUpInside)
     }
-    
     
     //MARK: @IBAction Functions
     @IBAction func spinButton(_ sender: Any) {
         if !self.isSpinning{
             spin()
         }
-        
     }
     
     //MARK: Spin Function
@@ -111,13 +105,10 @@ class GameViewController: UIViewController{
         
     }
     
-    
-    
     //MARK: @objc Functions
     @objc func goBackDismissAction() {
         self.dismiss(animated: true,completion: nil)
     }
-    
     
     //MARK: Create Slices Function
     func createSlices()->[Slice]{
@@ -220,7 +211,7 @@ struct Constants{
     ]
 }
 
-//MARK: Extension
+//MARK: Extensions
 extension SFWConfiguration {
     static var defaultConfiguration: SFWConfiguration {
         let sliceColorType = SFWConfiguration.ColorType.evenOddColors(evenColor: .yellow, oddColor: .orange)
