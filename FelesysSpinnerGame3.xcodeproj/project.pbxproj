@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		180907C92A960A4B00E067F6 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180907C82A960A4B00E067F6 /* EditViewController.swift */; };
+		182F30632A9573E10090E0D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F30622A9573E10090E0D4 /* AppDelegate.swift */; };
+		182F30652A9573E10090E0D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F30642A9573E10090E0D4 /* SceneDelegate.swift */; };
+		182F30672A9573E10090E0D4 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F30662A9573E10090E0D4 /* GameViewController.swift */; };
+		182F306A2A9573E10090E0D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182F30682A9573E10090E0D4 /* Main.storyboard */; };
+		182F306F2A9573E30090E0D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182F306D2A9573E30090E0D4 /* LaunchScreen.storyboard */; };
+		182F30782A95745C0090E0D4 /* SwiftFortuneWheel in Frameworks */ = {isa = PBXBuildFile; productRef = 182F30772A95745C0090E0D4 /* SwiftFortuneWheel */; };
+		182F307A2A958F4F0090E0D4 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182F30792A958F4F0090E0D4 /* Media.xcassets */; };
+		1881B9AD2A959F080057805C /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881B9AC2A959F080057805C /* SplashScreenViewController.swift */; };
+		1881B9AF2A95A04A0057805C /* TestViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881B9AE2A95A04A0057805C /* TestViewViewController.swift */; };
+		1881B9D32A95C9370057805C /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1881B9D22A95C9370057805C /* click.wav */; };
+		1881B9D52A95C97F0057805C /* mixkit-handgun-click-1660.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1881B9D42A95C97E0057805C /* mixkit-handgun-click-1660.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		180907C82A960A4B00E067F6 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		182F305F2A9573E10090E0D4 /* FelesysSpinnerGame3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FelesysSpinnerGame3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		182F30622A9573E10090E0D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		182F30642A9573E10090E0D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		182F30662A9573E10090E0D4 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		182F30692A9573E10090E0D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		182F306E2A9573E30090E0D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		182F30702A9573E30090E0D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		182F30792A958F4F0090E0D4 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		1881B9AC2A959F080057805C /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		1881B9AE2A95A04A0057805C /* TestViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewViewController.swift; sourceTree = "<group>"; };
+		1881B9D22A95C9370057805C /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
+		1881B9D42A95C97E0057805C /* mixkit-handgun-click-1660.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "mixkit-handgun-click-1660.mp3"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		182F305C2A9573E10090E0D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				182F30782A95745C0090E0D4 /* SwiftFortuneWheel in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		182F30562A9573E10090E0D4 = {
+			isa = PBXGroup;
+			children = (
+				182F30612A9573E10090E0D4 /* FelesysSpinnerGame3 */,
+				182F30602A9573E10090E0D4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		182F30602A9573E10090E0D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				182F305F2A9573E10090E0D4 /* FelesysSpinnerGame3.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		182F30612A9573E10090E0D4 /* FelesysSpinnerGame3 */ = {
+			isa = PBXGroup;
+			children = (
+				1881B9AE2A95A04A0057805C /* TestViewViewController.swift */,
+				182F30622A9573E10090E0D4 /* AppDelegate.swift */,
+				182F30642A9573E10090E0D4 /* SceneDelegate.swift */,
+				1881B9AC2A959F080057805C /* SplashScreenViewController.swift */,
+				182F30662A9573E10090E0D4 /* GameViewController.swift */,
+				180907C82A960A4B00E067F6 /* EditViewController.swift */,
+				182F30682A9573E10090E0D4 /* Main.storyboard */,
+				182F30792A958F4F0090E0D4 /* Media.xcassets */,
+				182F306D2A9573E30090E0D4 /* LaunchScreen.storyboard */,
+				1881B9D22A95C9370057805C /* click.wav */,
+				182F30702A9573E30090E0D4 /* Info.plist */,
+				1881B9D42A95C97E0057805C /* mixkit-handgun-click-1660.mp3 */,
+			);
+			path = FelesysSpinnerGame3;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		182F305E2A9573E10090E0D4 /* FelesysSpinnerGame3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 182F30732A9573E30090E0D4 /* Build configuration list for PBXNativeTarget "FelesysSpinnerGame3" */;
+			buildPhases = (
+				182F305B2A9573E10090E0D4 /* Sources */,
+				182F305C2A9573E10090E0D4 /* Frameworks */,
+				182F305D2A9573E10090E0D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FelesysSpinnerGame3;
+			packageProductDependencies = (
+				182F30772A95745C0090E0D4 /* SwiftFortuneWheel */,
+			);
+			productName = FelesysSpinnerGame3;
+			productReference = 182F305F2A9573E10090E0D4 /* FelesysSpinnerGame3.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		182F30572A9573E10090E0D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					182F305E2A9573E10090E0D4 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 182F305A2A9573E10090E0D4 /* Build configuration list for PBXProject "FelesysSpinnerGame3" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 182F30562A9573E10090E0D4;
+			packageReferences = (
+				182F30762A95745C0090E0D4 /* XCRemoteSwiftPackageReference "SwiftFortuneWheel" */,
+			);
+			productRefGroup = 182F30602A9573E10090E0D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				182F305E2A9573E10090E0D4 /* FelesysSpinnerGame3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		182F305D2A9573E10090E0D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				182F306F2A9573E30090E0D4 /* LaunchScreen.storyboard in Resources */,
+				1881B9D52A95C97F0057805C /* mixkit-handgun-click-1660.mp3 in Resources */,
+				182F307A2A958F4F0090E0D4 /* Media.xcassets in Resources */,
+				182F306A2A9573E10090E0D4 /* Main.storyboard in Resources */,
+				1881B9D32A95C9370057805C /* click.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		182F305B2A9573E10090E0D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				182F30672A9573E10090E0D4 /* GameViewController.swift in Sources */,
+				182F30632A9573E10090E0D4 /* AppDelegate.swift in Sources */,
+				180907C92A960A4B00E067F6 /* EditViewController.swift in Sources */,
+				1881B9AD2A959F080057805C /* SplashScreenViewController.swift in Sources */,
+				182F30652A9573E10090E0D4 /* SceneDelegate.swift in Sources */,
+				1881B9AF2A95A04A0057805C /* TestViewViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		182F30682A9573E10090E0D4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				182F30692A9573E10090E0D4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		182F306D2A9573E30090E0D4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				182F306E2A9573E30090E0D4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		182F30712A9573E30090E0D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		182F30722A9573E30090E0D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		182F30742A9573E30090E0D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JVJZXPS8LZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FelesysSpinnerGame3/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alen.FelesysSpinnerGame3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		182F30752A9573E30090E0D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JVJZXPS8LZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FelesysSpinnerGame3/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alen.FelesysSpinnerGame3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		182F305A2A9573E10090E0D4 /* Build configuration list for PBXProject "FelesysSpinnerGame3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				182F30712A9573E30090E0D4 /* Debug */,
+				182F30722A9573E30090E0D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		182F30732A9573E30090E0D4 /* Build configuration list for PBXNativeTarget "FelesysSpinnerGame3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				182F30742A9573E30090E0D4 /* Debug */,
+				182F30752A9573E30090E0D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		182F30762A95745C0090E0D4 /* XCRemoteSwiftPackageReference "SwiftFortuneWheel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sh-khashimov/SwiftFortuneWheel.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		182F30772A95745C0090E0D4 /* SwiftFortuneWheel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 182F30762A95745C0090E0D4 /* XCRemoteSwiftPackageReference "SwiftFortuneWheel" */;
+			productName = SwiftFortuneWheel;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 182F30572A9573E10090E0D4 /* Project object */;
+}
