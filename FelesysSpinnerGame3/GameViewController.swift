@@ -13,28 +13,18 @@ class GameViewController: UIViewController{
     //MARK: Properties
     var arrayCount = 0
     var array:[Slice] = []
+    var isSpinning:Bool = false
     
     
     //MARK: @IBOutlet varibles
-    @IBOutlet weak var fortuneWheel: SwiftFortuneWheel! {
-        didSet {
-            //turns on tap gesture recognizer
-            fortuneWheel.wheelTapGestureOn = true
-            
-            //selected index by tap
-            fortuneWheel.onWheelTap = { (index) in
-                print("tap to index: \(index)")
-            }
-        }
-    }
+    @IBOutlet weak var fortuneWheel: SwiftFortuneWheel!
     
     @IBOutlet var goBackBtn: UIButton!
     
     
     //MARK: ViewDidLoad
-    override func viewDidLoad() {
+    override func viewDidLoad(){
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         configureFortuneWheelUI()
         configureButtonUI()
     }
@@ -45,7 +35,9 @@ class GameViewController: UIViewController{
         fortuneWheel.configuration = .defaultConfiguration
         fortuneWheel.slices = createSlices()
         fortuneWheel.onSpinButtonTap = {
-            self.spinButton(self)
+            if !self.isSpinning{
+                self.spinButton(self)
+            }
         }
         
         //added to edit constrains
@@ -66,42 +58,63 @@ class GameViewController: UIViewController{
     
     func configureButtonUI(){
         goBackBtn.translatesAutoresizingMaskIntoConstraints = false
-                view.addSubview(goBackBtn)
-                
-                // Create top constraint with 20 points padding
-                let topConstraint = goBackBtn.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20)
-                
-                // Create leading constraint with 20 points padding
-                let leadingConstraint = goBackBtn.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
-                
-                // Activate the constraints
-                NSLayoutConstraint.activate([topConstraint, leadingConstraint])
+        view.addSubview(goBackBtn)
         
-        // Add tap action to the button
-        goBackBtn.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        //create top constraint with 20 padding points
+        let topConstraint = goBackBtn.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20)
+        
+        //create leading constraint with 20
+        let leadingConstraint = goBackBtn.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
+        
+        //activate the constraints
+        NSLayoutConstraint.activate([topConstraint, leadingConstraint])
+        
+        
+        
+        goBackBtn.addTarget(self, action: #selector(goBackDismissAction), for: .touchUpInside)
     }
     
     
     //MARK: @IBAction Functions
     @IBAction func spinButton(_ sender: Any) {
+        if !self.isSpinning{
+            spin()
+        }
+        
+    }
+    
+    //MARK: Spin Function
+    func spin(){
         arrayCount = array.count
-        print(arrayCount)
         let finishAtIndex = Int.random(in: 0...arrayCount-1)
+        
+        guard finishAtIndex >= 0 && finishAtIndex < arrayCount else {
+            print("Index \(finishAtIndex) is out of bounds")
+            showSomethingWentWrongAlert()
+            return
+        }
+        
+        ///making self.isSpinning = true
+        /// because if index is out of bound it will return from spin function(its checking in above guard ) ,
+        /// so if index is not out of bound then only we need to make self.isSpinning = true ,
+        ///  otherwise we need additional one more step to make it false
+        ///  thats why we given self.isSpinning = true , under the  guard
+        self.isSpinning = true
         fortuneWheel.startRotationAnimation(finishIndex: finishAtIndex, continuousRotationTime: 1) { (finished) in
             print(finished)
-            self.showAlert(_outcome: finishAtIndex)
+            self.showOutcomeAlert(_outcomeIndex: finishAtIndex)
+            self.isSpinning = false
             print("finished")
         }
         
-       
     }
     
+    
+    
     //MARK: @objc Functions
-    @objc func buttonTapped() {
-            // Handle button tap here
-            print("Button tapped!")
+    @objc func goBackDismissAction() {
         self.dismiss(animated: true,completion: nil)
-        }
+    }
     
     
     //MARK: Create Slices Function
@@ -126,13 +139,13 @@ class GameViewController: UIViewController{
     }
     
     //MARK: Alert Function
-    func showAlert(_outcome:Int) {
+    func showOutcomeAlert(_outcomeIndex:Int) {
         let offers:[String] = Constants.offers
         
         var alertTitle:String =  "Congratulation 🎁"
-        let alertMessage:String = offers[_outcome]
+        let alertMessage:String = offers[_outcomeIndex]
         
-        if _outcome == 0 || _outcome == 4 {
+        if _outcomeIndex == 0 || _outcomeIndex == 4 {
             alertTitle = "Oops"
         }
         
@@ -141,9 +154,23 @@ class GameViewController: UIViewController{
         alert.addAction(UIAlertAction(title: "Spin again",
                                       style: UIAlertAction.Style.default,
                                       handler: { _ in
-            self.spinButton(self)
+            if !self.isSpinning{
+                self.spinButton(self)
+            }
         }))
         alert.addAction(UIAlertAction(title: "Got it",
+                                      style: UIAlertAction.Style.default,
+                                      handler: nil))
+        
+        DispatchQueue.main.async {
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func showSomethingWentWrongAlert(){
+        let alert = UIAlertController(title:"Something went wrong ⚠️", message:"try after sometime..." , preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "got it",
                                       style: UIAlertAction.Style.default,
                                       handler: nil))
         
@@ -217,6 +244,4 @@ extension SFWConfiguration {
         return configuration
     }
 }
-
-
 

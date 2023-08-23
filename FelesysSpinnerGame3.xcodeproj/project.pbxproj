@@ -58,12 +58,12 @@
 		182F30612A9573E10090E0D4 /* FelesysSpinnerGame3 */ = {
 			isa = PBXGroup;
 			children = (
+				180907CA2A962A3600E067F6 /* Main.storyboard */,
 				182F30622A9573E10090E0D4 /* AppDelegate.swift */,
 				182F30642A9573E10090E0D4 /* SceneDelegate.swift */,
 				1881B9AC2A959F080057805C /* SplashScreenViewController.swift */,
 				182F30662A9573E10090E0D4 /* GameViewController.swift */,
 				182F30792A958F4F0090E0D4 /* Media.xcassets */,
-				180907CA2A962A3600E067F6 /* Main.storyboard */,
 				182F30702A9573E30090E0D4 /* Info.plist */,
 			);
 			path = FelesysSpinnerGame3;
@@ -274,11 +274,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JVJZXPS8LZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FelesysSpinnerGame3/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Spin N Win";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.casino-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -302,11 +305,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JVJZXPS8LZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FelesysSpinnerGame3/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Spin N Win";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.casino-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
