@@ -101,10 +101,12 @@ class GameViewController: UIViewController{
         ///  thats why we given self.isSpinning = true , under the  guard
         self.isSpinning = true
         fortuneWheel.startRotationAnimation(finishIndex: finishAtIndex, continuousRotationTime: 1) { (finished) in
-            print(finished)
+            //MARK: End of Spinning
+            // this area works only after spin animation stops
+            // also if we print finished it will print true
             self.showOutcomeAlert(_outcomeIndex: finishAtIndex)
             self.isSpinning = false
-            print("finished")
+            
         }
         
     }
