@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,11 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg15" translatesAutoresizingMaskIntoConstraints="NO" id="ziX-Tj-hJ8">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="-44" width="393" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XyM-zc-vH6">
                                 <rect key="frame" x="16" y="758" width="361" height="60"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="pdm-zO-OFA"/>
                                 </constraints>
@@ -35,7 +36,7 @@
                                     <action selector="btnAction:" destination="g4d-jI-pNP" eventType="touchUpInside" id="4eb-kG-tt5"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-splashScreen" translatesAutoresizingMaskIntoConstraints="NO" id="9zx-Xr-wCn">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogoTransparent" translatesAutoresizingMaskIntoConstraints="NO" id="9zx-Xr-wCn">
                                 <rect key="frame" x="16" y="176" width="361" height="551"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                             </imageView>
@@ -45,7 +46,7 @@
                         <constraints>
                             <constraint firstItem="XyM-zc-vH6" firstAttribute="top" secondItem="9zx-Xr-wCn" secondAttribute="bottom" constant="31" id="6hb-wo-2ye"/>
                             <constraint firstItem="9zx-Xr-wCn" firstAttribute="top" secondItem="xyt-zV-ByV" secondAttribute="top" constant="117" id="EP0-8j-4C8"/>
-                            <constraint firstItem="ziX-Tj-hJ8" firstAttribute="top" secondItem="xyt-zV-ByV" secondAttribute="top" constant="-59" id="W5F-IZ-X9b"/>
+                            <constraint firstItem="ziX-Tj-hJ8" firstAttribute="top" secondItem="xyt-zV-ByV" secondAttribute="top" constant="-103" id="W5F-IZ-X9b"/>
                             <constraint firstItem="ziX-Tj-hJ8" firstAttribute="leading" secondItem="xyt-zV-ByV" secondAttribute="leading" id="ant-7F-mey"/>
                             <constraint firstItem="xyt-zV-ByV" firstAttribute="bottom" secondItem="ziX-Tj-hJ8" secondAttribute="bottom" constant="-34" id="dc7-cz-wtS"/>
                             <constraint firstItem="xyt-zV-ByV" firstAttribute="trailing" secondItem="ziX-Tj-hJ8" secondAttribute="trailing" id="fHx-bO-MWd"/>
@@ -56,13 +57,14 @@
                             <constraint firstItem="XyM-zc-vH6" firstAttribute="leading" secondItem="xyt-zV-ByV" secondAttribute="leading" constant="16" id="rof-bZ-gsP"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="OCR-gj-02F"/>
                     <connections>
                         <segue destination="qhu-F7-H0V" kind="presentation" identifier="showGameScreen" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="QeZ-O2-9iE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wD5-3L-pU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="832.82442748091603" y="-16.197183098591552"/>
+            <point key="canvasLocation" x="1759.5419847328244" y="-16.197183098591552"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="5E3-LT-KME">
@@ -75,11 +77,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBc-vd-Kqu">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XdK-yM-MdV">
-                                        <rect key="frame" x="18" y="8" width="101" height="35"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="chevron.backward.circle" catalog="system" title="Button"/>
-                                    </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background 3" highlightedImage="Background 5" translatesAutoresizingMaskIntoConstraints="NO" id="A2q-lf-Ghz">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
@@ -90,35 +87,38 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XPZ-zZ-sXd" customClass="SwiftFortuneWheel" customModule="SwiftFortuneWheel">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XPZ-zZ-sXd" customClass="SwiftFortuneWheel" customModule="SwiftFortuneWheel">
                                                     <rect key="frame" x="16" y="185" width="361" height="361"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="pinImage" value="Image"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="pinImage" value="spinnerIndicator"/>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="isSpinEnabled" value="YES"/>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="spinTitle" value="SPIN"/>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="isPinHidden" value="NO"/>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="spinBackgroundImage" value="diagram"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfR-ug-EMh">
-                                                    <rect key="frame" x="326" y="78" width="35" height="35"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXE-um-qW5">
+                                                    <rect key="frame" x="16" y="76" width="35" height="35"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="35" id="N0z-uT-zeQ"/>
-                                                        <constraint firstAttribute="height" constant="35" id="N8K-5D-OhX"/>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="ohd-8d-V9W"/>
+                                                        <constraint firstAttribute="height" constant="35" id="H9U-aG-5e8"/>
+                                                        <constraint firstAttribute="width" constant="35" id="pBn-DW-oPm"/>
                                                     </constraints>
+                                                    <color key="tintColor" red="0.094117647060000004" green="0.12549019610000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" image="pencil" catalog="system"/>
-                                                    <connections>
-                                                        <action selector="popUpEditScreen:" destination="qhu-F7-H0V" eventType="touchUpInside" id="RW7-Uf-yr8"/>
-                                                    </connections>
+                                                    <buttonConfiguration key="configuration" style="plain">
+                                                        <imageReference key="image" image="chevron.backward.circle" catalog="system" symbolScale="large"/>
+                                                    </buttonConfiguration>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="jfR-ug-EMh" firstAttribute="top" secondItem="n7n-eU-3KZ" secondAttribute="topMargin" constant="70" id="2Ji-hx-7cU"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="jfR-ug-EMh" secondAttribute="trailing" constant="24" id="cL3-F6-kYr"/>
+                                                <constraint firstAttribute="trailing" secondItem="eXE-um-qW5" secondAttribute="trailing" constant="342" id="1jY-Lk-aUc"/>
+                                                <constraint firstItem="eXE-um-qW5" firstAttribute="leading" secondItem="n7n-eU-3KZ" secondAttribute="leading" constant="16" id="2fB-7S-EJj"/>
+                                                <constraint firstItem="eXE-um-qW5" firstAttribute="top" secondItem="n7n-eU-3KZ" secondAttribute="top" constant="76" id="68N-if-snF"/>
+                                                <constraint firstItem="XPZ-zZ-sXd" firstAttribute="centerX" secondItem="n7n-eU-3KZ" secondAttribute="centerX" id="NEH-oM-zrO"/>
+                                                <constraint firstAttribute="bottom" secondItem="XPZ-zZ-sXd" secondAttribute="bottom" constant="306" id="QmG-cQ-Uyp"/>
+                                                <constraint firstItem="XPZ-zZ-sXd" firstAttribute="top" secondItem="eXE-um-qW5" secondAttribute="bottom" constant="74" id="U7l-1f-D4p"/>
+                                                <constraint firstItem="eXE-um-qW5" firstAttribute="leading" secondItem="XPZ-zZ-sXd" secondAttribute="leading" id="tTV-Qg-zFW"/>
                                             </constraints>
                                         </view>
                                         <blurEffect style="regular"/>
@@ -127,13 +127,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="A2q-lf-Ghz" firstAttribute="leading" secondItem="MBc-vd-Kqu" secondAttribute="leading" id="9hb-yn-f31"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XdK-yM-MdV" secondAttribute="trailing" constant="20" symbolic="YES" id="Ded-Um-NeT"/>
                                     <constraint firstAttribute="trailing" secondItem="HgQ-Og-7K8" secondAttribute="trailing" id="LfO-3k-hdE"/>
                                     <constraint firstItem="HgQ-Og-7K8" firstAttribute="leading" secondItem="MBc-vd-Kqu" secondAttribute="leading" id="UUb-Nj-4mg"/>
                                     <constraint firstAttribute="bottom" secondItem="A2q-lf-Ghz" secondAttribute="bottom" id="cqg-e1-yZs"/>
-                                    <constraint firstItem="XdK-yM-MdV" firstAttribute="top" secondItem="MBc-vd-Kqu" secondAttribute="topMargin" id="gvd-Xv-nIp"/>
                                     <constraint firstItem="A2q-lf-Ghz" firstAttribute="top" secondItem="MBc-vd-Kqu" secondAttribute="top" id="oRK-qc-r8H"/>
-                                    <constraint firstItem="XdK-yM-MdV" firstAttribute="leading" secondItem="MBc-vd-Kqu" secondAttribute="leadingMargin" constant="10" id="om8-2K-ov3"/>
                                     <constraint firstAttribute="trailing" secondItem="A2q-lf-Ghz" secondAttribute="trailing" id="y87-dG-K2V"/>
                                     <constraint firstAttribute="bottom" secondItem="HgQ-Og-7K8" secondAttribute="bottom" id="yCm-z1-6sI"/>
                                     <constraint firstItem="HgQ-Og-7K8" firstAttribute="top" secondItem="MBc-vd-Kqu" secondAttribute="top" id="ylM-Ih-g1V"/>
@@ -141,10 +138,11 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbN-uf-poL">
                                 <rect key="frame" x="30" y="752" width="333" height="60"/>
-                                <color key="backgroundColor" red="0.094117647060000004" green="0.12549019610000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="E7V-NX-8RA"/>
                                 </constraints>
+                                <color key="tintColor" systemColor="tintColor"/>
                                 <size key="titleShadowOffset" width="4" height="2"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Spin Spinner"/>
@@ -174,41 +172,28 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="fortuneWheel" destination="XPZ-zZ-sXd" id="NW3-Kv-B2m"/>
-                        <segue destination="330-IX-w2l" kind="presentation" identifier="showEditView" id="GZP-eJ-H0P"/>
+                        <outlet property="goBackBtn" destination="eXE-um-qW5" id="hHY-kA-CyO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zs8-A0-tns" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1759.5419847328244" y="-16.197183098591552"/>
-        </scene>
-        <!--Edit View Controller-->
-        <scene sceneID="7Xb-RA-slQ">
-            <objects>
-                <viewController id="330-IX-w2l" customClass="EditViewController" customModule="FelesysSpinnerGame3" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hQv-ub-f0g">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="p2P-bi-emK"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9wv-Ye-2oL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2752" y="-74"/>
+            <point key="canvasLocation" x="2686.2595419847326" y="-16.197183098591552"/>
         </scene>
     </scenes>
     <resources>
         <image name="Background 3" width="350" height="350"/>
         <image name="Background 5" width="350" height="350"/>
-        <image name="bg-splashScreen" width="500" height="500"/>
+        <image name="appLogoTransparent" width="500" height="500"/>
         <image name="bg15" width="1200" height="1200"/>
         <image name="chevron.backward.circle" catalog="system" width="128" height="123"/>
-        <image name="pencil" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

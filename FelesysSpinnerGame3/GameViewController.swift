@@ -8,12 +8,14 @@
 import UIKit
 import SwiftFortuneWheel
 
-class GameViewController: UIViewController, EditViewControllerDelegate {
+class GameViewController: UIViewController{
     
     //MARK: Properties
     var arrayCount = 0
     var array:[Slice] = []
     
+    
+    //MARK: @IBOutlet varibles
     @IBOutlet weak var fortuneWheel: SwiftFortuneWheel! {
         didSet {
             //turns on tap gesture recognizer
@@ -26,22 +28,27 @@ class GameViewController: UIViewController, EditViewControllerDelegate {
         }
     }
     
-    
-    @IBAction func popUpEditScreen(_ sender: Any) {
-        print("popUpEditScreen called")
-        performSegue(withIdentifier: "showEditView", sender: Any?.self)
-    }
+    @IBOutlet var goBackBtn: UIButton!
     
     
+    //MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        configureFortuneWheelUI()
+        configureButtonUI()
+    }
+    
+    
+    //MARK: Fuctions to Configure UI
+    func configureFortuneWheelUI(){
         fortuneWheel.configuration = .defaultConfiguration
         fortuneWheel.slices = createSlices()
         fortuneWheel.onSpinButtonTap = {
             self.spinButton(self)
         }
         
+        //added to edit constrains
         fortuneWheel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(fortuneWheel)
         
@@ -54,24 +61,28 @@ class GameViewController: UIViewController, EditViewControllerDelegate {
             fortuneWheel.widthAnchor.constraint(equalToConstant: constantValue),
             fortuneWheel.heightAnchor.constraint(equalToConstant: constantValue)
         ])
+    }
+    
+    
+    func configureButtonUI(){
+        goBackBtn.translatesAutoresizingMaskIntoConstraints = false
+                view.addSubview(goBackBtn)
+                
+                // Create top constraint with 20 points padding
+                let topConstraint = goBackBtn.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20)
+                
+                // Create leading constraint with 20 points padding
+                let leadingConstraint = goBackBtn.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
+                
+                // Activate the constraints
+                NSLayoutConstraint.activate([topConstraint, leadingConstraint])
         
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let editViewController = segue.destination as? EditViewController {
-            editViewController.delegate = self
-        }
-    }
-    
-    // Delegate method implementation
-    func didUpdateSpinner(slices: [Slice]) {
-        // Update the SwiftFortuneWheel object with the new slices
-        self.array = slices
-        fortuneWheel.slices = slices
-        arrayCount = slices.count
+        // Add tap action to the button
+        goBackBtn.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
     }
     
     
+    //MARK: @IBAction Functions
     @IBAction func spinButton(_ sender: Any) {
         arrayCount = array.count
         print(arrayCount)
@@ -81,15 +92,24 @@ class GameViewController: UIViewController, EditViewControllerDelegate {
             self.showAlert(_outcome: finishAtIndex)
             print("finished")
         }
+        
+       
     }
     
-    //MARK: Functions
+    //MARK: @objc Functions
+    @objc func buttonTapped() {
+            // Handle button tap here
+            print("Button tapped!")
+        self.dismiss(animated: true,completion: nil)
+        }
+    
+    
+    //MARK: Create Slices Function
     func createSlices()->[Slice]{
         var slices: [Slice] = []
-        self.array = []
+        self.array.removeAll()
         
         let colors: [UIColor] = Constants.colors
-        
         let offerImages:[String] = Constants.offerImages
         
         for each in 0...7{
@@ -110,7 +130,7 @@ class GameViewController: UIViewController, EditViewControllerDelegate {
         let offers:[String] = Constants.offers
         
         var alertTitle:String =  "Congratulation 🎁"
-        var alertMessage:String = offers[_outcome]
+        let alertMessage:String = offers[_outcome]
         
         if _outcome == 0 || _outcome == 4 {
             alertTitle = "Oops"
@@ -125,8 +145,7 @@ class GameViewController: UIViewController, EditViewControllerDelegate {
         }))
         alert.addAction(UIAlertAction(title: "Got it",
                                       style: UIAlertAction.Style.default,
-                                      handler: nil
-                                     ))
+                                      handler: nil))
         
         DispatchQueue.main.async {
             self.present(alert, animated: true, completion: nil)
@@ -134,6 +153,8 @@ class GameViewController: UIViewController, EditViewControllerDelegate {
     }
 }
 
+
+//MARK: Constants Struct
 struct Constants{
     static let offers: [String] = [
         "Try again",
@@ -170,7 +191,7 @@ struct Constants{
     ]
 }
 
-//Extension
+//MARK: Extension
 extension SFWConfiguration {
     static var defaultConfiguration: SFWConfiguration {
         let sliceColorType = SFWConfiguration.ColorType.evenOddColors(evenColor: .yellow, oddColor: .orange)
